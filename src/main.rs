@@ -1,3 +1,10 @@
+use pig_lating::run;
+use std::process;
+
 fn main() {
-    println!("Hello, world!");
+
+    if let Err(e) = run(){
+        eprintln!("{e}");
+        process::exit(1);
+    }
 }
